@@ -1,0 +1,69 @@
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 25px;
+}
+button{
+    
+    width: 100px;
+    background-color: lightblue;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list-container{
+    padding: 20px;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    flex-basis: content;
+    gap: 10px;
+    /* text-align: center; */
+}
+
+.ind-list{
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 580px;
+    background-color: grey;
+    width: 300px;
+}
+
+#check{
+    width: 20px;
+    height: 20px;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.not-complete{
+    text-decoration: none;
+}
+
+.edit-form{
+    position: fixed;
+    /* height; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    
+}

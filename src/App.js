@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Todolist from "./components/Todolist";
+import '../src/components/style.css'
+import { QueryClientProvider, QueryClient } from "react-query";
+import { Route, Routes } from "react-router-dom";
+import Edit from "./components/Edit";
+
+const queryClient = new QueryClient()
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Todolist/>}>
+          </Route>
+          <Route path=":id" element={<Edit/>}></Route>
+        </Routes>
+        
+      </div>
+    </QueryClientProvider>
   );
 }
 
